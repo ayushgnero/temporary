@@ -35,6 +35,38 @@
                     document.getElementById("e1").innerText = "Incorrect Email Id ";
                 }
             }
+            function emptyValidate()
+            {
+              var fname = document.getElementById("emailId").value;
+              var lname = document.getElementById("emailId").value;
+              var emailId = document.getElementById("emailId").value;
+              var password = document.getElementById("emailId").value;
+              var repassword = document.getElementById("emailId").value;
+              console.log("1");
+              if (fname.value.length == 0)
+              {
+                document.getElementById("e1").style.color = "red";
+                document.getElementById("e1").innerText = "Empty First Name ";
+              }
+              else if (lname.value.length == 0) {
+                document.getElementById("e1").style.color = "red";
+                document.getElementById("e1").innerText = "Empty Last Name ";
+              }
+              else if (emailId.value.length == 0 )
+              {
+                document.getElementById("e1").style.color = "red";
+                document.getElementById("e1").innerText = "Empty Email ";
+              }
+              else if (repassword.value.length == 0 )
+              {
+                document.getElementById("e1").style.color = "red";
+                document.getElementById("e1").innerText = "Empty Password";
+              }
+              else if (repassword.value.length == 0) {
+                document.getElementById("e1").style.color = "red";
+                document.getElementById("e1").innerText = "Confirm Password ";
+              }
+            }
         </script>
     </head>
     <body>
@@ -46,7 +78,7 @@
                     Email Address: <input type="text" id="emailId"  onkeyup="emailValidate()" > <p id="e1"> </p>
                     Password: <input type="password" id="pass" > <p id="e2"> </p>
                     Confirm Password: <input type="password" id="cpass" onkeyup="passValidate()" >
-                    <input type="submit"   >
+                    <input type="submit"  onkeyup="emptyValidate()"  >
                     <input type="reset" >
             </form>
         </center>
