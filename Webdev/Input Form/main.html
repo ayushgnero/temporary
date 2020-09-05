@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+    <head>
+
+        <script type='text/JavaScript'>
+
+
+
+            function passValidate()
+
+            {
+
+                var pass = document.getElementById("pass").value;
+
+                var cpass = document.getElementById("cpass").value;
+
+
+
+                if(pass == cpass)
+
+                    {
+
+                        console.log("4");
+
+                        document.getElementById("e2").innerText = " ";
+
+                    }
+
+                    else
+
+                    {
+
+                        console.log("5");
+
+                        document.getElementById("e2").style.color = "red";
+
+                        document.getElementById("e2").innerText = "Password Mismatch ";
+
+                    }
+
+            }
+
+
+
+            function emailValidate()
+
+            {
+
+                var emailId = document.getElementById("emailId").value;
+
+
+
+                console.log("1");
+
+                var regex = /^\w+([-.]?\w+)*@\w+([-.]?\w+)*\.\w+([-.]\w+)*$/;
+
+
+
+                if( regex.test(emailId))
+
+                {
+
+                    console.log("2");
+
+                    document.getElementById("e1").innerText = " ";
+
+                }
+
+                else
+
+                {
+
+                    console.log("3");
+
+                    document.getElementById("e1").style.color = "red";
+
+                    document.getElementById("e1").innerText = "Incorrect Email Id ";
+
+                }
+
+            }
+
+
+
+        </script>
+
+    </head>
+
+
+
+    <body>
+
+        <h2>
+
+        <center>
+
+            <form name="f">
+
+                    First Name: <input type="text" id="fname" >
+
+
+
+ 
+
+                    Last Name: <input type="text" id="lname" >
+
+
+
+
+
+                    Email Address: <input type="text" id="emailId"  onkeyup="emailValidate()" > <p id="e1"> </p>
+
+
+
+
+
+                    Password: <input type="password" id="pass" > <p id="e2"> </p>
+
+
+
+
+
+                    Confirm Password: <input type="password" id="cpass" onkeyup="passValidate()" >
+
+
+
+
+
+
+
+                    <input type="submit"   >
+
+                    <input type="reset" >
+
+            </form>
+
+        </center>
+
+         </h2>
+
+    </body>
+
+</html>
