@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SHERLOCKED</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Manjari:wght@700&family=Roboto+Slab&display=swap');
+/* Center the loader */
+#loader {
+  position: absolute;
+}
+a
+{
+  text-decoration: none;
+  color:white;
+}
+.a5
+{
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 25%;
+}
+img
+{
+    margin-top: 11%
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction:column;
+  margin:0px;
+}
+.a4
+{
+  width:150px;
+  margin-top: 0.5%;
+  margin-left: 38%;
+  background-color: rgba(215,35,35,0.7);
+  border-radius: 25px;
+  border: none;
+  font-family: 'Manjari', sans-serif;
+  font-size: 16px;
+  color: white;
+  width:400px;
+  height:45px;
+}
+.a2
+{
+  width: 40%;
+  margin-left: 29%;
+  margin-top: 1%;
+
+}
+.a3
+{
+  width: 40%;
+  margin-left: 29%;
+  margin-top: 2%;
+}
+.form
+{
+  position: relative;
+  color: #d72323;
+  text-align: left;
+  font-family: 'Manjari', sans-serif;
+  font-style:  ;
+  overflow: hidden;
+}
+.form input
+{
+  width:100%;
+  width:100%;
+  margin-left:4%;
+  color: #d72323;
+  background: transparent;
+  padding-top: 20px;
+  border:none;
+}
+.form label
+{
+  position: absolute;
+  bottom:0px;
+  left:2%;
+  width:100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #d72323;
+}
+.form label::after
+{
+  content:"";
+  position: absolute;
+  height: 100%;
+  left:0px;
+  bottom:-1px;
+  width:100%;
+  border-bottom: 2px solid red;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease;
+}
+.content-name
+{
+    position:absolute;
+    bottom:5px;
+    left:0px;
+    transition: all 0.2s ease;
+}
+.form input:focus + .label-name .content-name, .form input:valid + .label-name .content-name
+{
+  transform: translateY(-130%);
+  font-size: 10px;
+  color:red;
+  padding-top:20px;
+  border:none;
+  outline:none;
+}
+.form input:focus + .label-name::after, .form input:valid + .label-name::after
+{
+  transform: translateX(0%);
+}
+
+.a1
+{
+  background-position: center;
+   background-size: cover;
+  background-image: url("Images/853865.jpg");
+  height: 100%;
+  margin:0px;
+  width:100%;
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  width:100%;
+  align-items:center;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+:root
+{
+   --color-text: #fff;
+   --color-bg: #000;
+   --color-link: #f9d77e;
+   --color-link-hover: #fff;
+   --color-info: #efc453;
+   --glitch-width: 100vw;
+   --glitch-height:0vh;
+   --gap-horizontal: 10px;
+   --gap-vertical: 5px;
+   --time-anim: 4s;
+   --delay-anim: 2s;
+   --blend-mode-1: none;
+   --blend-mode-2: none;
+   --blend-mode-3: none;
+   --blend-mode-4: none;
+   --blend-mode-5: overlay;
+   --blend-color-1: transparent;
+   --blend-color-2: transparent;
+   --blend-color-3: transparent;
+   --blend-color-4: transparent;
+   --blend-color-5: #af4949;
+}
+ *, *::before, *::after
+{
+   box-sizing: border-box;
+}
+body
+{
+  margin: 0;
+  padding: 0;
+}
+}
+</style>
+</head>
+
+  <div class="animate-bottom form">
+      <div class="a2 form">
+        <input type="text" name="username" autocomplete="off" required>
+        <label for="username" class="label-name">
+          <span class="content-name">Customer Name</span>
+        </label>
+      </div>
+      <div class="a2 form">
+        <input type="radio" id="male" name="AC" value="AC">
+            <label for="AC">AC</label><br>
+      </div>
+      <div class="a2 form">
+        <input type="radio" id="female" name="AC" value="NOC AC">
+        <label for="Non AC">NON AC</label><br>
+      </div>
+      <div class="a2 form">
+        <input type="checkbox" id="vehicle1" name="room1" value="Bike">
+        <label for="room1"> 1 ROOM</label><br>
+      </div>
+      <div class="a2 form">
+        <input type="checkbox" id="vehicle2" name="room2" value="Car">
+        <label for="room2"> 2ROOM</label><br>
+      </div>
+        <div class="a2 form">
+          <input type="checkbox" id="vehicle3" name="room3" value="Boat">
+          <label for="room3"> 3ROOM</label><br>
+        </div>
+
+        <a href="temp2.html">
+          <button type="submit" name="Signup" class="a4">Register</button>
+        </a>
+
+  </div>
+</body>
+</html>
