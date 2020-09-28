@@ -168,39 +168,36 @@ body
 
   <div class="animate-bottom form">
       <div class="a2 form">
-        <input type="text" name="Mobile" title="Error Message" pattern="[1-9]{1}[0-9]{9}" maxlength="10">
-        <label for="Mobile" class="label-name">
-          <span class="content-name">Mobile</span>
+        <input type="text" name="CardNumber" title="Error Message" pattern="[0-9]{16}" maxlength="16">
+        <label for="CardNumber" class="label-name">
+          <span class="content-name">Card Number</span>
         </label>
       </div>
-
-      <p style="margin-left:30%;">Payment Method:</p>
       <div class="a2 form">
-        <input type="radio" id="male" name="AC" value="AC">
-            <label for="Cash">Cash</label><br>
+        <input type="text" name="CVV" title="Error Message" pattern="[A-Z]{3}" maxlength="3">
+        <label for="CVV" class="label-name">
+          <span class="content-name">Card Number</span>
+        </label>
       </div>
-      <div class="a2 form">
-        <input type="radio" id="female" name="AC" value="NOC AC">
-        <label for="Card">Card</label><br>
-      </div>
-      <div class="a2 form">
-        <input type="radio" id="female" name="AC" value="NOC AC">
-        <label for="Net Banking">Net Banking</label><br>
-      </div>
-      <div class="a1 form">
-        <label for="cars">Number Of Occupants:</label>
-
-        <select name="Occupants" id="cars">
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-        </select>
-      </div>
-        <a href="temp2.html">
-          <button type="submit" name="Signup" class="a4">Register</button>
-        </a>
-
+      <a href="temp2.html">
+        <button type="submit" name="Signup" class="a4">Register</button>
+      </a>
   </div>
 </body>
+<script type="text/javascript">
+  function required()
+{
+var empt = document.forms["CardNumber"]["CVV"].value;
+if (empt == "")
+{
+alert("Please input a Value");
+return false;
+}
+else
+{
+alert('Code has accepted : you can try another');
+return true;
+}
+}
+</script>
 </html>
