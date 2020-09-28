@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Q1</title>
+  <title>Q2</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Manjari:wght@700&family=Roboto+Slab&display=swap');
@@ -14,16 +14,7 @@ a
   text-decoration: none;
   color:white;
 }
-.a5
-{
-    text-align: center;
-    margin-top: 2%;
-    margin-left: 25%;
-}
-img
-{
-    margin-top: 11%
-}
+.
 html, body {
   height: 100%;
   width: 100%;
@@ -34,32 +25,13 @@ html, body {
   flex-direction:column;
   margin:0px;
 }
-.a4
-{
-  width:150px;
-  margin-top: 0.5%;
-  margin-left: 38%;
-  background-color: rgba(215,35,35,0.7);
-  border-radius: 25px;
-  border: none;
-  font-family: 'Manjari', sans-serif;
-  font-size: 16px;
-  color: white;
-  width:400px;
-  height:45px;
-}
+
 .a2
 {
   width: 40%;
   margin-left: 29%;
   margin-top: 1%;
 
-}
-.a3
-{
-  width: 40%;
-  margin-left: 29%;
-  margin-top: 2%;
 }
 .form
 {
@@ -130,6 +102,10 @@ html, body {
   background-image: url("Images/853865.jpg");
   height: 100%;
   margin:0px;
+  margin-left:42%;
+
+  margin-top:2%;
+  item-align:center;
   width:100%;
 }
 
@@ -192,20 +168,39 @@ body
 
   <div class="animate-bottom form">
       <div class="a2 form">
-        <input type="text" name="username" autocomplete="off" required>
-        <label for="username" class="label-name">
-          <span class="content-name">Username</span>
+        <input type="text" name="Mobile" title="Error Message" pattern="[1-9]{1}[0-9]{9}">
+        <label for="Mobile" class="label-name">
+          <span class="content-name">Mobile</span>
         </label>
       </div>
-        <div class="a3 form">
-          <input type="password" name="password" autocomplete="off" required>
-          <label for="password" class="label-name">
-            <span class="content-name">Password</span>
-          </label>
-        </div>
+
+      <p style="margin-left:30%;">Payment Method:</p>
+      <div class="a2 form">
+        <input type="radio" id="male" name="AC" value="AC">
+            <label for="Cash">Cash</label><br>
+      </div>
+      <div class="a2 form">
+        <input type="radio" id="female" name="AC" value="NOC AC">
+        <label for="Card">Card</label><br>
+      </div>
+      <div class="a2 form">
+        <input type="radio" id="female" name="AC" value="NOC AC">
+        <label for="Net Banking">Net Banking</label><br>
+      </div>
+      <div class="a1 form">
+        <label for="cars">Number Of Occupants:</label>
+
+        <select name="Occupants" id="cars">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+        </select>
+      </div>
         <a href="temp2.html">
           <button type="submit" name="Signup" class="a4">Register</button>
         </a>
+
   </div>
 </body>
 </html>
